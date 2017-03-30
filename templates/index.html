@@ -36,7 +36,7 @@
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse" style="color:#528B8B">
                     <i class="fa fa-bars"></i>
                 </button>
                     {% if indextype == "index" %}
@@ -302,8 +302,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            ~
+                        <td style="text-align:center">
+                            <br>
                         </td>
                     </tr>
                     <tr>
@@ -312,8 +312,8 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            ~
+                        <td style="text-align:center">
+                            <br>
                         </td>
                     </tr>
                     <tr>
@@ -350,9 +350,8 @@
                 <h2>Contact {{json.basics.firstname}}</h2>
                 <div class="col-lg-8 col-lg-offset-2">
                     <p><a href="mailto:{{json.basics.email}}">{{json.basics.email}}</a> |
-                        {{json.basics.location}} |
-                        {{json.basics.phone}} |
-                        Generated on: {{generated}}</p>
+                        <i class="fa fa-mobile"></i> {{json.basics.phone}} |
+                        <i class="fa fa-globe"></i> {{json.basics.location}}</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                 <ul class="list-inline banner-social-buttons">
