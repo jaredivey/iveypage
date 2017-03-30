@@ -177,8 +177,8 @@
                 {% for items in json.work %}
                     <tr>
                         <td style="width:8%;vertical-align:text-top">{{items.years}}</td>
-                        <td style="width:78%;vertical-align:text-top"><b>{{items.summary}}</b></td>
-                        <td style="width:14%;text-align:right;vertical-align:text-top"><b><i>{{items.location}}</i></b></td>
+                        <td style="width:70%;vertical-align:text-top"><b>{{items.summary}}</b></td>
+                        <td style="width:22%;text-align:right;vertical-align:text-top"><b><i>{{items.location}}</i></b></td>
                     </tr>
                     <tr>
                         <td style="width:10%"></td>
@@ -203,7 +203,9 @@
                 <table style="width:100%" >
                 {% for items in json.education %}
                     <tr>
-                        <td style="width:8%;vertical-align:text-top">{{items.years}}</td><td style="width:62%;vertical-align:text-top"><b>{{items.degree}}</b> in {{items.major}} [{{items.gpa}}]</td><td style="width:30%;text-align:right;vertical-align:text-top"><b><i>{{items.school}}</i></b></td>
+                        <td style="width:8%;vertical-align:text-top">{{items.years}}</td>
+                        <td style="width:57%;vertical-align:text-top"><b>{{items.degree}}</b> in {{items.major}} [{{items.gpa}}]</td>
+                        <td style="width:35%;text-align:right;vertical-align:text-top"><b><i>{{items.school}}</i></b></td>
                     </tr>
                     <tr>
                         <td style="width:10%"></td>
