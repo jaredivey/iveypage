@@ -1,0 +1,205 @@
+{
+"basics": {
+"firstname" : "Jared",
+"lastname" : "Ivey",
+"name": "Jared S. Ivey",
+"picture": "",
+"email": "j.ivey@gatech.edu",
+"phone": "(478)808-1200",
+"website": "https://jaredivey.com",
+"summary": "",
+"location": "Lizella, GA",
+"profiles": [
+{
+"network": "Github",
+"url": "https://github.com/jaredivey"
+},
+{
+"network": "Home Page",
+"url": "https://jaredivey.com"
+}]
+},
+"education": [{
+"years": "2013-2017",
+"degree": "Ph.D.",
+"major": "Electrical and Computer Engineering",
+"gpa": "3.80/4.00",
+"school": "Georgia Institute of Technology",
+"extras": "Research Advisor: Dr. George F. Riley",
+"extras2": "Thesis: Validation of Scalable Software-Defined Network Simulations Using Simulation-Based Routing Applications"
+},
+{
+"years": "2010-2012",
+"degree": "M.S.E.",
+"major": "Software Engineering",
+"gpa": "4.00/4.00",
+"school": "Mercer University",
+"extras": "Minor in Engineering Management"
+},
+{
+"years": "2005-2009",
+"degree": "B.S.",
+"major": "Biomedical Engineering",
+"gpa": "3.76/4.00",
+"school": "Georgia Institute of Technology",
+"extras": "Summa Cum Laude"
+}
+],
+"work": [
+{
+"company": "577 SOFTWARE MAINTENANCE SQUADRON",
+"position": "Electronics Engineer",
+"years": "2009-Now",
+"location": "Robins AFB, GA",
+"summary": "Technical Lead for Software Development and Maintenance of E8-C Joint STARS",
+"duties": [
+"Subject matter expert in pre- and post-mission data processing tools for the E-8C Joint Surveillance Target Attack Radar System (JSTARS).",
+"Communicate as an advisor to other technical leads and integrated product team (IPT) leads both in-house and at Northrop Grumman Aerospace Systems in Melbourne, FL, to improve production quality.",
+"Exceed expectations by delivering 100% defect free software products in spite of aggressive delivery schedules and stringent quality measures.",
+"Duties include initiating, directing, and coordinating software studies and modifications, resolving complex requirements, and refining new software techniques.",
+"Implement, functionally test, and review several Software Change Requests (SCRs) and Software Tracking Requests (STRs)."
+]
+},
+{
+"company": "DEPARTMENT OF ELECTRICAL AND COMPUTER ENGINEERING, GEORGIA TECH",
+"position": "Teaching Assistant",
+"years": "2013-2014",
+"location": "Atlanta, GA",
+"summary": "Graduate Teaching Assistant for ECE 3005: Professional and Technical Communication",
+"duties": [
+"Provided guidance and assistance for approximately 20 undergraduate students per semester to improve the formatting and appearance of resumes, technical documents, and presentations."
+]
+},
+{
+"company": "DEPARTMENT OF CHEMICAL ENGINEERING, GEORGIA TECH",
+"position": "Computer Assistant",
+"years": "2009",
+"location": "Atlanta, GA",
+"summary": "Computer Support Assistant to Students and Faculty in the Chemical Engineering Department",
+"duties": [
+"Provided computer support to faculty, staff, and students by granting building access, resetting account passwords, replacing printer paper and ink cartridges, and installing software.",
+"Coordinated with Dell Support to request replacement computer hardware, installed the components when they arrived, and shipped the nonoperational components to the manufacturer.",
+"Aided user account migration from one server network to another by editing users’ security permissions, adding computers to the network, and adding network printers to a server."
+]
+},
+{
+"company": "DEPARTMENT OF BIOMEDICAL ENGINEERING, GEORGIA TECH",
+"position": "Teaching Assistant",
+"years": "2008",
+"location": "Atlanta, GA",
+"summary": "Undergraduate Teaching Assistant for BMED 3300: Biotransport",
+"duties": [
+"Facilitated and evaluated assessments for over 70 students in a Biotransport class."
+]
+},
+{
+"company": "SOUTH CENTRAL POOLS",
+"position": "Assistant to Operations Manager",
+"years": "2007-2008",
+"location": "Forest Park, GA",
+"summary": "Assistant to Facility Operations Manager",
+"duties": [
+"Performed day-to-day operations including, but not limited to, shipping and receiving of UPS and freight line shipments, inventory control, and order processing."
+]
+}
+],
+  "publications": [
+    {
+      "date": "SEP 2016",
+      "title": "Designing and enabling simulation of real-world GPU network applications with ns-3 and DCE",
+      "link": "http://ieeexplore.ieee.org/document/7774619/",
+      "location": "London, UK",
+      "authors": "J. S. Ivey, G. F. Riley, B. P. Swenson, and M. L. Loper",
+      "conference": "2016 IEEE 24th International Symposium on Modeling, Analysis and Simulation of Computer and Telecommunication Systems (MASCOTS '16)"
+    },
+    {
+      "date": "JUN 2016",
+      "title": "Analysis of programming language overhead in DCE",
+      "link": "http://dl.acm.org/citation.cfm?id=2915383",
+      "location": "Seattle, WA, US",
+      "authors": "J. S. Ivey and G. F. Riley",
+      "conference": "Proceedings of the Workshop on ns-3 (WNS3 '16)"
+    },
+    {
+      "date": "MAY 2016",
+      "title": "Comparing a scalable SDN simulation framework built on ns-3 and DCE with existing SDN simulators and emulators",
+      "link": "http://dl.acm.org/citation.cfm?id=2901391",
+      "location": "Banff, AB, CA",
+      "authors": "J. S. Ivey, H. Yang, C. Zhang, and G. F. Riley",
+      "conference": "Proceedings of the 2016 annual ACM Conference on SIGSIM Principles of Advanced Discrete Simulation (SIGSIM-PADS '16)"
+    },
+    {
+      "date": "MAY 2015",
+      "title": "Phold performance of conservative synchronization methods for distributed simulation in ns-3",
+      "link": "http://dl.acm.org/citation.cfm?id=2756511",
+      "location": "Barcelona, ES",
+      "authors": "J. S. Ivey, B. P. Swenson, and G. F. Riley",
+      "conference": "Proceedings of the 2015 Workshop on ns-3 (WNS3 '15)"
+    },
+    {
+      "date": "DEC 2014",
+      "title": "Performance of conservative synchronization methods for complex interconnected campus networks in ns-3",
+      "link": "http://dl.acm.org/citation.cfm?id=2694238",
+      "location": "Savannah, GA, US",
+      "authors": "B. P. Swenson, J. S. Ivey, and G. F. Riley",
+      "conference": "Proceedings of the Winter Simulation Conference 2014 (WSC '14)"
+    },
+    {
+      "date": "MAY 2014",
+      "title": "Phold performance for distributed network simulation under conservative synchronization methods in ns-3",
+      "link": "http://dl.acm.org/citation.cfm?id=2601410",
+      "location": "Denver, CO, US",
+      "authors": "J. S. Ivey, G. F. Riley, and B. P. Swenson",
+      "conference": "Proceedings of the 2nd ACM SIGSIM Conference on Principles of Advanced Discrete Simulation (SIGSIM PADS '14)"
+    }
+  ],
+  "certifications": [
+    {
+      "date": "2015",
+      "title": "Systems Planning, Research, Development and Engineering",
+      "organization": "Defense Acquisition University",
+      "type": "Engineering Levels 1 and 2"
+    },
+    {
+      "date": "2012",
+      "title": "Systems Planning, Research, Development and Engineering",
+      "organization": "Defense Acquisition University",
+      "type": "Science and Technology Manager Levels 1 and 2"
+    },
+    {
+      "date": "2011",
+      "title": "Systems Planning, Research, Development and Engineering",
+      "organization": "Defense Acquisition University",
+      "type": "Program Systems Engineer Level 1"
+    },
+    {
+      "date": "2011",
+      "title": "Program Management",
+      "organization": "Defense Acquisition University",
+      "type": "Level 1"
+    },
+    {
+      "date": "2010",
+      "title": "Software Professional Development Program",
+      "organization": "Air Force Institute of Technology",
+      "type": "Software Development track"
+    }
+  ],
+  "training": [
+    {
+      "date": "2011",
+      "title": "DEF 1013P FalconView Advanced Users",
+      "organization": "Georgia Tech Research Institute"
+    },
+    {
+      "date": "2011",
+      "title": "DEF 1012P Introduction to FalconView Basic Operations",
+      "organization": "Georgia Tech Research Institute"
+    },
+    {
+      "date": "2010",
+      "title": "HE634S HP OpenVMS v8.3 Programming Features",
+      "organization": "PARSEC Group"
+    }
+  ]
+}

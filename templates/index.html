@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="{{json.basics.name}}s website">
+    <meta name="author" content="{{json.basics.name}}">
+
+    <title>{{json.basics.name}}</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='font-awesome-4.1.0/css/font-awesome.min.css') }}" rel="stylesheet"
+          type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                    {% if indextype == "index" %}
+                        <a class="navbar-brand page-scroll" href="#page-top">
+                    {% else %}
+                        <a class="navbar-brand page-scroll" href="/">
+                    {% endif %}
+                    <i class="fa fa-play-circle"></i>  <span class="light">{{json.basics.firstname}}</span> {{json.basics.lastname}}
+
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="hidden">
+                        {% if indextype == "index" %}
+                            <a href="#page-top"></a>
+                        {% else %}
+                            <a href="/"></a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        {% if indextype == "index" %}
+                            <a class="page-scroll" href="#about">About Me</a>
+                        {% else %}
+                            <a class="page-scroll" href="/#about">About Me</a>
+                        {% endif %}
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-hover="dropdown" href="/professional">Professional</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="page-scroll" href="{% if indextype != "professional" %}/professional{% endif %}#experience">Experience</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="{% if indextype != "professional" %}/professional{% endif %}#education">Education</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="{% if indextype != "professional" %}/professional{% endif %}#certifications">Certifications</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="{% if indextype != "professional" %}/professional{% endif %}#training">Training</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-hover="dropdown" href="/publications">Publications</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="page-scroll" href="{% if indextype != "publications" %}/publications{% endif %}#published">Published Works</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="{% if indextype != "publications" %}/publications{% endif %}#thesis">Thesis</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-hover="dropdown" href="/personal">Personal</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="page-scroll" href="{% if indextype != "personal" %}/personal{% endif %}#family">Family</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="{% if indextype != "personal" %}/personal{% endif %}#interests">Interests</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#download">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+         </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">{{json.basics.name}}</h1>
+                        <p class="intro-text">
+                            {% if indextype == "index" %}
+                                Welcome to my website! Scroll down if you just need some quick info about me, or select
+                                one of the above links to check out things in more detail. Thanks for stopping by!
+                            {% elif indextype == "professional" %}
+                                My professional experience covers my current and previous employment including
+                                responsibilities and recognitions. My academic information provides a brief look at my educational endeavors
+                                and the degrees I have earned.
+                            {% elif indextype == "publications" %}
+                                My published work can be found through the below links to IEEExplore and the ACM digital library.
+                                Also, a summary of my Ph.D. dissertation thesis is provided.
+                            {% elif indextype == "personal" %}
+                                Outside of work, I enjoy spending time with family and staying active. I've more recently
+                                discovered that podcasts are a great way to make the work commutes less boring.
+                            {% endif %}
+                        </p>
+                         <a href="#resume" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <style type='text/css'>
+    @media (min-width: 767px) {
+    .content-section {
+        padding-top: 70px;
+        }
+    }
+    </style>
+    <!-- About Me Section -->
+    {% if indextype == "index" %}
+    <section id="about" class="container content-section text-left">
+        <div class="row">
+            <h2>About Me</h2>
+            <p></p>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if indextype == "professional" %}
+    <!-- Experience Section -->
+    <section id="experience" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h4>Experience</h4>
+                <table style="width:100%" >
+                {% for items in json.work %}
+                    <tr>
+                        <td style="width:8%;vertical-align:text-top">{{items.years}}</td>
+                        <td style="width:78%;vertical-align:text-top"><b>{{items.summary}}</b></td>
+                        <td style="width:14%;text-align:right;vertical-align:text-top"><b><i>{{items.location}}</i></b></td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td colspan="3"><i>{{items.company}}</i></td>
+                    </tr>
+                    {% for duty in items.duties %}
+                    <tr>
+                        <td style="width:8%"></td>
+                        <td colspan="2"><ul><li>{{duty}}</li></ul></td>
+                    </tr>
+                    {% endfor %}
+                {% endfor %}
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- Education Section -->
+    <section id="education" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <p><h4>Education</h4>
+                <table style="width:100%" >
+                {% for items in json.education %}
+                    <tr>
+                        <td style="width:8%;vertical-align:text-top">{{items.years}}</td><td style="width:62%;vertical-align:text-top"><b>{{items.degree}}</b> in {{items.major}} [{{items.gpa}}]</td><td style="width:30%;text-align:right;vertical-align:text-top"><b><i>{{items.school}}</i></b></td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td><i>{{items.extras}}</i></td>
+                    </tr>
+                    {% if items.extras2 %}
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td><i>{{items.extras2}}</i></td>
+                    </tr>{% endif %}
+                {% endfor %}
+                </table>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h4>Certifications</h4>
+                <table style="width:100%" >
+                {% for items in json.certifications %}
+                    <tr>
+                        <td style="width:8%;vertical-align:text-top">{{items.date}}</td>
+                        <td style="width:58%;vertical-align:text-top"><b>{{items.title}}</b></td>
+                        <td style="width:34%;text-align:right;vertical-align:text-top"><b><i>{{items.organization}}</i></b></td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td colspan="3"><i>{{items.type}}</i></td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- Training Section -->
+    <section id="training" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h4>Training</h4>
+                <table style="width:100%" >
+                {% for items in json.training %}
+                    <tr>
+                        <td style="width:8%;vertical-align:text-top">{{items.date}}</td>
+                        <td style="width:58%;vertical-align:text-top"><b>{{items.title}}</b></td>
+                        <td style="width:34%;text-align:right;vertical-align:text-top"><b><i>{{items.organization}}</i></b></td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    {% if indextype == "publications" %}
+    <!-- Published Works Section -->
+    <section id="published" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h4>Publications</h4>
+                <table style="width:100%" >
+                {% for items in json.publications %}
+                    <tr>
+                        <td style="width:8%;vertical-align:text-top">{{items.date}}</td>
+                        <td style="width:50%;vertical-align:text-top"><a href="{{items.link}}"><b>{{items.title}}</b></a></td>
+                        <td style="width:12%;text-align:right;vertical-align:text-top"><b><i>{{items.location}}</i></b></td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td colspan="1">{{items.authors}}</td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td colspan="1"><i>{{items.conference}}</i></td>
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- Thesis Section -->
+    <section id="thesis" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h4>Validation of Scalable Software-Defined Network Simulations Using Simulation-Based Routing Applications</h4>
+                <p>A Dissertation Presented to The Academic Faculty By Jared S. Ivey In Partial Fulfillment of the Requirements for the Degree
+                    Doctor of Philosophy in the School of Electrical and Computer Engineering, Georgia Institute of Technology</p>
+                <table style="width=100%">
+                    <tr>
+                        <td>
+                            With farther reaching applications being developed in the realm of software-defined networking (SDN), simulation can justify the feasibility of deploying initial SDN capabilities in a network or assist with troubleshooting and testing existing SDN deployments as a part of maintenance or expansion. This work describes an SDN simulation framework that supports realistic and portable SDN capabilities. Direct Code Execution (DCE) in the network simulator ns-3 is extended to allow the execution of network programs written in Python and Java. Support for CUDA libraries in DCE is provided, permitting the simulation of portable GPU-based network applications. An SDN simulation framework in ns-3 and DCE is designed allowing scalable, portable simulation of SDN controller applications written for the Python-based libraries POX and Ryu supporting OpenFlow 1.0 and 1.3.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ~
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Similarly to simulation, SDN provides an environment where an entire topology is controlled collectively. The mechanisms that are used to manage routing decisions in simulation can be leveraged for use in SDN. Dynamic, on-demand packet routing in SDN is described that exploits currently existing headers and OpenFlow rules to provide a routing solution influenced by NIx vectors. The use of a parallelized version of the Floyd-Warshall algorithm is studied in the context of SDN as well using the massively parallel processing capability of GPUs. With this effort, route generation for scalable SDN topologies is accomplished in less time than with sequential graph algorithms.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ~
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            The final part of this work aims to provide representative performance profiles that introduces appropriate latencies and other behaviors into the SDN simulation framework. Using multiple Ryu applications, scalable network topologies are tested using both the hardware testbed GENI and network simulations. Controller processing time is gathered and evaluated with the goal of working toward statistically similar results in both environments. A model is designed and evaluated for an adequate representation of instruction processing time distributions in an SDN controller operating in simulation.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+    <!-- Download Section -->
+    <section id="download" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Download Curriculum Vitae</h2>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="/pdf" class="btn btn-default btn-lg"><span class="network-name">Via Overleaf</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact {{json.basics.firstname}}</h2>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p><a href="mailto:{{json.basics.email}}">{{json.basics.email}}</a> |
+                        {{json.basics.location}} |
+                        {{json.basics.phone}} |
+                        Generated on: {{generated}}</p>
+                </div>
+                <ul class="list-inline banner-social-buttons">
+                    {% for items in json.basics.profiles %}
+                    <li>
+                        <a href="{{items.url}}" class="btn btn-default btn-lg"><span class="network-name">{{items.network}}</span></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; {{json.basics.name}} 2017</p>
+        </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="{{ url_for('static', filename='js/jquery-1.11.0.js') }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+    <!-- Hover dropdown -->
+    <script src="{{ url_for('static', filename='js/bootstrap-hover-dropdown.min.js') }}"></script>
+<!-- Google tracking -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55374222-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+
+</html>
