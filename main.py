@@ -1,11 +1,11 @@
 import os, time
-from flask import Flask, render_template, json, make_response, g, redirect
+from flask import Flask, render_template, json, make_response, g, redirect, url_for
 
 os.environ['TZ'] = 'EST'
 time.tzset()
 
 def import_json():
-    f =  open("resume.json")
+    f =  open("/home/ubuntu/iveypage/resume.json")
     jdat = f.read()
     json_data = json.loads(jdat)
     f.close()
@@ -51,7 +51,7 @@ def publications():
 
 @app.route('/personal')
 def personal():
-    return render_template('index.html', indextype = "personal", json = g.json_data, generated = time.strftime("%a, %d %b %Y %H:%M:%S EST"))
+    return render_template('index.html', indextype = "personal", json = g.json_data, filenames=[url_for('static',filename='img/sloane.jpg'), url_for('static',filename='img/knowles.jpg')], generated = time.strftime("%a, %d %b %Y %H:%M:%S EST"))
 
 @app.route('/pdf')
 def pdf():

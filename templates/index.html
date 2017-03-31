@@ -11,7 +11,7 @@
           content="{{json.basics.name}}s website">
     <meta name="author" content="{{json.basics.name}}">
 
-    <title>{{json.basics.name}}</title>
+    <title>{{json.basics.name}}{% if indextype=="index" %} -- Home{% elif indextype=="professional" %} -- Professional{% elif indextype=="publications" %} -- Publications{% elif indextype=="personal" %} -- Personal{% endif %}</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -123,6 +123,13 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">{{json.basics.name}}</h1>
+                        {% if indextype=="professional" %}
+                        <h2>Career and Academic Experience</h2>
+                        {% elif indextype=="publications" %}
+                        <h2>Published Research and Disseration Thesis</h2>
+                        {% elif indextype=="personal" %}
+                        <h2>Personal Life outside of Work</h2>
+                        {% endif %}
                         <p class="intro-text">
                             {% if indextype == "index" %}
                                 Welcome to my website! Scroll down if you just need some quick info about me, or select
@@ -262,6 +269,61 @@
     </section>
     {% endif %}
 
+    {% if indextype == "personal" %}
+    <!-- Family Section -->
+    <section id="family" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h4>Family</h4>
+                <table style="width:100%">
+                    <tr>
+                    <td style="width:50%;vertical-align:text-bottom"><b>Sloane Ivey</b><br>I somehow convinced this beautiful woman to spend the rest of her life with me. We were married on Ono Island in Orange Beach, AL, back in 2011. Since then, we have raised three dog-children: a Yorkie and Shih Tzu mix, a beagle with the legs of a basset hound, and a Cavalier King Charles Spaniel. We have had some amazing travels: Dublin, Barcelona, Banff, London, and Paris. Now, we're venturing onward to the exciting and intimidating realm of parenthood. I could not have wished for someone as amazing as she has been, and I am truly the luckiest man in the world to have had her pick me.</td>
+                    <td style="width:50%;vertical-align:text-bottom"><img src="{{filenames[0]}}" height=100%></img></td>
+                    </tr>
+                    <tr>
+                    <td style="width:50%;vertical-align:text-bottom"><img src="{{filenames[1]}}" height=100%></img></td>
+                    <td style="width:50%;vertical-align:text-bottom"><b>Knowles Ivey</b><br>This picture will be updated soon. Sloane and I are beyond ecstatic and can't wait to meet this little guy! I have so many thoughts and ideas for how he might turn out, but I feel sure who he really becomes will exceed my expectations.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- Interests Section -->
+    <section id="interests" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h4>Interests</h4>
+                <ul style="list-style-type:none">
+                    <li>
+                        <b>Running</b>
+                        <br>I have been running since 2004. Being able to get out and get my blood flowing has benefited my sanity greatly. Check out my <a href="https://www.athlinks.com/athletes/56244472">Athlinks</a> page to see the ebbs and flows of my running times over the years.<br>
+                        <br><i>Personal Records</i>
+                        <ul style="list-style-type:none">
+                            <li>5K: 17:48 (2016 Macon Labor Day Road Race)</li>
+                            <li>10K: 38:40 (2016 Wesley Glen Cherry Blossom Road Race)</li>
+                            <li>1/2 Marathon: 1:25:47 (Rock 'n' Roll Savannah 1/2 Marathon)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <br>
+                    </li>
+                    <li>
+                        <b>Podcasts</b>
+                        <br>Four years of driving back and forth between Lizella and Atlanta and Warner Robins helped me learn just how useful podcasts can be. Listening to a variety of topics from design to history to running has kept my commutes interesting. Below I've provided a list of my top 5.
+                        <ol>
+                            <li><a href="http://99percentinvisible.org">99% Invisible</a></li>
+                            <li><a href="http://backstoryradio.org">Backstory</a></li>
+                            <li><a href="https://gimletmedia.com/reply-all/">Reply All</a></li>
+                            <li><a href="https://gimletmedia.com/science-vs/">Science Vs</a></li>
+                            <li><a href="https://www.runnersworld.com/the-runners-world-show/">The Runner's World Show</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
     {% if indextype == "publications" %}
     <!-- Published Works Section -->
     <section id="published" class="container content-section text-left">
@@ -293,8 +355,8 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h4>Validation of Scalable Software-Defined Network Simulations Using Simulation-Based Routing Applications</h4>
-                <p>A Dissertation Presented to The Academic Faculty By Jared S. Ivey In Partial Fulfillment of the Requirements for the Degree
-                    Doctor of Philosophy in the School of Electrical and Computer Engineering, Georgia Institute of Technology</p>
+                <h6>A Dissertation Presented to The Academic Faculty By Jared S. Ivey In Partial Fulfillment of the Requirements for the Degree
+                    Doctor of Philosophy in the School of Electrical and Computer Engineering, Georgia Institute of Technology</h6>
                 <table style="width=100%">
                     <tr>
                         <td>
