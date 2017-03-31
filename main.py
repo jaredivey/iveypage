@@ -39,7 +39,7 @@ def before_request():
 
 @app.route('/')
 def index():
-    return render_template('index.html', indextype = "index", json = g.json_data, generated = time.strftime("%a, %d %b %Y %H:%M:%S EST"))
+    return render_template('index.html', indextype = "index", json = g.json_data, filenames=[url_for('static',filename='img/jaredsloane.jpg'), url_for('static',filename='img/pads.jpg')], generated = time.strftime("%a, %d %b %Y %H:%M:%S EST"))
 
 @app.route('/professional')
 def professional():
