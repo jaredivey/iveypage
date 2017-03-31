@@ -66,7 +66,7 @@
                         {% endif %}
                     </li>
                     <li>
-                        <a class="dropdown-toggle" data-hover="dropdown" href="/professional">Professional</a>
+                        <a class="page-scroll dropdown-toggle" data-hover="dropdown" href="{% if indextype == "professional" %}#page-top{% else %}/professional{% endif %}">Professional</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="page-scroll" href="{% if indextype != "professional" %}/professional{% endif %}#experience">Experience</a>
@@ -83,7 +83,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="dropdown-toggle" data-hover="dropdown" href="/publications">Publications</a>
+                        <a class="page-scroll dropdown-toggle" data-hover="dropdown" href="{% if indextype == "publications" %}#page-top{% else %}/publications{% endif %}">Publications</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="page-scroll" href="{% if indextype != "publications" %}/publications{% endif %}#published">Published Works</a>
@@ -94,7 +94,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="dropdown-toggle" data-hover="dropdown" href="/personal">Personal</a>
+                        <a class="page-scroll dropdown-toggle" data-hover="dropdown" href="{% if indextype == "personal" %}#page-top{% else %}/personal{% endif %}">Personal</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="page-scroll" href="{% if indextype != "personal" %}/personal{% endif %}#family">Family</a>
