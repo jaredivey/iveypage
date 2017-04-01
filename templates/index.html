@@ -11,7 +11,7 @@
           content="{{json.basics.name}}s website">
     <meta name="author" content="{{json.basics.name}}">
 
-    <title>{{json.basics.name}}{% if indextype=="index" %} -- Home{% elif indextype=="professional" %} -- Professional{% elif indextype=="publications" %} -- Publications{% elif indextype=="personal" %} -- Personal{% endif %}</title>
+    <title>{{json.basics.name}}{% if indextype=="index" %} -- Home{% elif indextype=="professional" %} -- Professional{% elif indextype=="academic" %} -- Academic{% elif indextype=="personal" %} -- Personal{% endif %}</title>
     <!-- Bootstrap Core CSS -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 
