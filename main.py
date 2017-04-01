@@ -55,7 +55,7 @@ def personal():
 
 @app.route('/pdf')
 def pdf():
-    return redirect(url_for('',filename='iveycv.pdf'))
+    return redirect(url_for('static',filename='iveycv.pdf'))
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
