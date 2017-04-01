@@ -45,9 +45,9 @@ def index():
 def professional():
     return render_template('index.html', indextype = "professional", json = g.json_data, generated = time.strftime("%a, %d %b %Y %H:%M:%S EST"))
 
-@app.route('/publications')
-def publications():
-    return render_template('index.html', indextype = "publications", json = g.json_data, generated = time.strftime("%a, %d %b %Y %H:%M:%S EST"))
+@app.route('/academic')
+def academic():
+    return render_template('index.html', indextype = "academic", json = g.json_data, generated = time.strftime("%a, %d %b %Y %H:%M:%S EST"))
 
 @app.route('/personal')
 def personal():
