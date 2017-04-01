@@ -1,5 +1,9 @@
 import os, time
+from functools import wraps
 from flask import Flask, render_template, json, make_response, g, redirect, url_for
+from flask_sitemap import Sitemap, sitemap_page_needed
+
+cache = {}
 
 os.environ['TZ'] = 'EST'
 time.tzset()
@@ -32,6 +36,22 @@ def json2xml(json_obj, line_padding=""):
     return "%s%s" % (line_padding, json_obj)
 
 app = Flask(__name__)
+
+@sitemap_page_needed.connect
+def create_page(app, page, urlset):
+    cache[page] = Sitemap.render_page(urlset=urlset)
+
+def load_page(fn):
+    @wraps(fn)
+    def loader(*args, **kwargs):
+        page = kwargs.get('page')
+        data = cache.get(page)
+        return data if data else fn(*args, **kwargs)
+    return loader
+
+app.config['SITEMAP_INCLUDE_RULES_WITHOUT_PARAMS'] = True
+app.config['SITEMAP_MAX_URL_COUNT'] = 10
+app.config['SITEMAP_VIEW_DECORATORS'] = [load_page]
 
 @app.before_request
 def before_request():
