@@ -1,5 +1,6 @@
 import os, time
-from flask import Flask, render_template, json, make_response, g, redirect, url_for, render_pdf
+from flask import Flask, render_template, json, make_response, g, redirect, url_for
+from flask_weasyprint import render_pdf
 
 os.environ['TZ'] = 'EST'
 time.tzset()
