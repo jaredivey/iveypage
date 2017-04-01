@@ -72,9 +72,6 @@
                                 <a class="page-scroll" href="{% if indextype != "professional" %}/professional{% endif %}#experience">Experience</a>
                             </li>
                             <li>
-                                <a class="page-scroll" href="{% if indextype != "professional" %}/professional{% endif %}#education">Education</a>
-                            </li>
-                            <li>
                                 <a class="page-scroll" href="{% if indextype != "professional" %}/professional{% endif %}#certifications">Certifications</a>
                             </li>
                             <li>
@@ -83,13 +80,16 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="page-scroll dropdown-toggle" data-hover="dropdown" href="{% if indextype == "publications" %}#page-top{% else %}/publications{% endif %}">Publications</a>
+                        <a class="page-scroll dropdown-toggle" data-hover="dropdown" href="{% if indextype == "academic" %}#page-top{% else %}/academic{% endif %}">Academic</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="page-scroll" href="{% if indextype != "publications" %}/publications{% endif %}#published">Published Works</a>
+                                <a class="page-scroll" href="{% if indextype != "academic" %}/academic{% endif %}#education">Education</a>
                             </li>
                             <li>
-                                <a class="page-scroll" href="{% if indextype != "publications" %}/publications{% endif %}#thesis">Thesis</a>
+                                <a class="page-scroll" href="{% if indextype != "academic" %}/academic{% endif %}#published">Publications</a>
+                            </li>
+                            <li>
+                                <a class="page-scroll" href="{% if indextype != "academic" %}/academic{% endif %}#thesis">Thesis</a>
                             </li>
                         </ul>
                     </li>
@@ -125,8 +125,8 @@
                         <h1 class="brand-heading">{{json.basics.name}}</h1>
                         {% if indextype=="professional" %}
                         <h2>Career and Academic Experience</h2>
-                        {% elif indextype=="publications" %}
-                        <h2>Published Research and Dissertation Thesis</h2>
+                        {% elif indextype=="Academic" %}
+                        <h2>Education, Published Research, and Dissertation Thesis</h2>
                         {% elif indextype=="personal" %}
                         <h2>Personal Life outside of Work</h2>
                         {% endif %}
@@ -136,10 +136,10 @@
                                 one of the above links to check out things in more detail. Thanks for stopping by!
                             {% elif indextype == "professional" %}
                                 My professional experience covers my current and previous employment including
-                                responsibilities and recognitions. My academic information provides a brief look at my educational endeavors
-                                and the degrees I have earned.
-                            {% elif indextype == "publications" %}
-                                My published work can be found through the below links to IEEExplore and the ACM digital library.
+                                responsibilities and recognitions.
+                            {% elif indextype == "academic" %}
+                                My academic information provides a brief look at my educational endeavors
+                                and the degrees I have earned. My published work can be found through the below links to IEEExplore and the ACM digital library.
                                 Also, a summary of my Ph.D. dissertation thesis is provided.
                             {% elif indextype == "personal" %}
                                 Outside of work, I enjoy spending time with family and staying active. I've more recently
@@ -247,33 +247,6 @@
             </div>
         </div>
     </section>
-    <!-- Education Section -->
-    <section id="education" class="container content-section text-left">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <p><h4>Education</h4>
-                <table style="width:100%" >
-                {% for items in json.education %}
-                    <tr>
-                        <td style="width:8%;vertical-align:text-top">{{items.years}}</td>
-                        <td style="width:57%;vertical-align:text-top"><b>{{items.degree}}</b> in {{items.major}} [{{items.gpa}}]</td>
-                        <td style="width:35%;text-align:right;vertical-align:text-top"><b><i>{{items.school}}</i></b></td>
-                    </tr>
-                    <tr>
-                        <td style="width:10%"></td>
-                        <td><i>{{items.extras}}</i></td>
-                    </tr>
-                    {% if items.extras2 %}
-                    <tr>
-                        <td style="width:10%"></td>
-                        <td><i>{{items.extras2}}</i></td>
-                    </tr>{% endif %}
-                {% endfor %}
-                </table>
-                </p>
-            </div>
-        </div>
-    </section>
     <!-- Certifications Section -->
     <section id="certifications" class="container content-section text-left">
         <div class="row">
@@ -369,7 +342,34 @@
     </section>
     {% endif %}
 
-    {% if indextype == "publications" %}
+    {% if indextype == "academic" %}
+    <!-- Education Section -->
+    <section id="education" class="container content-section text-left">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <p><h4>Education</h4>
+                <table style="width:100%" >
+                {% for items in json.education %}
+                    <tr>
+                        <td style="width:8%;vertical-align:text-top">{{items.years}}</td>
+                        <td style="width:57%;vertical-align:text-top"><b>{{items.degree}}</b> in {{items.major}} [{{items.gpa}}]</td>
+                        <td style="width:35%;text-align:right;vertical-align:text-top"><b><i>{{items.school}}</i></b></td>
+                    </tr>
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td><i>{{items.extras}}</i></td>
+                    </tr>
+                    {% if items.extras2 %}
+                    <tr>
+                        <td style="width:10%"></td>
+                        <td><i>{{items.extras2}}</i></td>
+                    </tr>{% endif %}
+                {% endfor %}
+                </table>
+                </p>
+            </div>
+        </div>
+    </section>
     <!-- Published Works Section -->
     <section id="published" class="container content-section text-left">
         <div class="row">
