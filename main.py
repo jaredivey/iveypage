@@ -1,5 +1,5 @@
 import os, time
-from flask import Flask, render_template, json, make_response, g, redirect, url_for
+from flask import Flask, render_template, json, make_response, g, redirect, url_for, render_pdf
 
 os.environ['TZ'] = 'EST'
 time.tzset()
@@ -55,7 +55,7 @@ def personal():
 
 @app.route('/pdf')
 def pdf():
-    return url_for('static',filename='iveycv.pdf')
+    return render_pdf(url_for('static',filename='iveycv.pdf'))
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
