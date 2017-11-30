@@ -61,11 +61,11 @@
 "location": "Robins AFB, GA",
 "summary": "Technical Lead for Software Development and Maintenance of E8-C Joint STARS",
 "duties": [
-"Subject matter expert in pre- and post-mission data processing tools for the E-8C Joint Surveillance Target Attack Radar System (JSTARS).",
+"Subject matter expert in external geographic dataset management and pre- and post-mission data processing tools for the E-8C Joint Surveillance Target Attack Radar System (JSTARS).",
 "Communicate as an advisor to other technical leads and integrated product team (IPT) leads both in-house and at Northrop Grumman Aerospace Systems in Melbourne, FL, to improve production quality.",
 "Exceed expectations by delivering 100% defect free software products in spite of aggressive delivery schedules and stringent quality measures.",
 "Duties include initiating, directing, and coordinating software studies and modifications, resolving complex requirements, and refining new software techniques.",
-"Implement, functionally test, and review several Software Change Requests (SCRs) and Software Tracking Requests (STRs)."
+"Design, implement, functionally test, and review several Software Change Requests (SCRs), Activities, and Software Tracking Requests (STRs)."
 ]
 },
 {
@@ -112,6 +112,14 @@
 }
 ],
   "publications": [
+    {
+      "date": "OCT 2017",
+      "title": "Advancing Software-Defined Networks: A Survey",
+      "link": "http://ieeexplore.ieee.org/document/8066287/",
+      "location": "Online",
+      "authors": "J. Cox, J. Chung, S. Donovan, J. Ivey, R. Clark, G. Riley, and H. Owen",
+      "conference": "IEEE Access, vol. PP, no. 99, pp. 1-1"
+    },
     {
       "date": "SEP 2016",
       "title": "Designing and enabling simulation of real-world GPU network applications with ns-3 and DCE",
