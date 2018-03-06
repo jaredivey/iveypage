@@ -61,11 +61,23 @@
 "location": "Robins AFB, GA",
 "summary": "Technical Lead for Software Development and Maintenance of E8-C Joint STARS",
 "duties": [
-"Subject matter expert in external geographic dataset management and pre- and post-mission data processing tools for the E-8C Joint Surveillance Target Attack Radar System (JSTARS).",
+"Technical software lead and subject matter expert in external geographic dataset management and pre- and post-mission data processing tools for the E-8C Joint Surveillance Target Attack Radar System (JSTARS).",
+"Oversee a Scrum team of 8 engineers in the architectural design and development of new and existing software products for JSTARS through direct guidance, mentoring, and process facilitation of team members and by conducting products in an Agile manner through the software development life cycle.",
 "Communicate as an advisor to other technical leads and integrated product team (IPT) leads both in-house and at Northrop Grumman Aerospace Systems in Melbourne, FL, to improve production quality.",
 "Exceed expectations by delivering 100% defect free software products in spite of aggressive delivery schedules and stringent quality measures.",
 "Duties include initiating, directing, and coordinating software studies and modifications, resolving complex requirements, and refining new software techniques.",
 "Design, implement, functionally test, and review several Software Change Requests (SCRs), Activities, and Software Tracking Requests (STRs)."
+]
+},
+{
+"company": "PENFIELD COLLEGE, MERCER UNIVERSITY",
+"position": "Adjunct Faculty",
+"years": "2018-Now",
+"location": "Macon, GA",
+"summary": "Adjunct Professor in the Department of Mathematics, Science, and Informatics",
+"duties": [
+"Organize and orchestrate courses in computer programming in a hybrid (traditional and online) format to students pursuing the B.S. degree in Informatics in the Department of Mathematics, Science, and Informatics.",
+"Duties include preparing, administering, and grading course assignments and testing materials, planning and conducting lectures, and facilitating student learning and understanding through direct assistance."
 ]
 },
 {
@@ -112,6 +124,22 @@
 }
 ],
   "publications": [
+    {
+      "date": "DEC 2017",
+      "title": "Simulating Networks with NS-3 and Enhancing Realism with DCE",
+      "link": "http://ieeexplore.ieee.org/document/8247825/",
+      "location": "Las Vegas, NV, US",
+      "authors": "J. S. Ivey, B. P. Swenson, and G. F. Riley",
+      "conference": "2017 Winter Simulation Conference (WSC), pp. 690-704"
+    },
+    {
+      "date": "DEC 2017",
+      "title": "Scalability Comparison of SDN Control Plane Architectures Based on Simulations",
+      "link": "http://ieeexplore.ieee.org/document/8280465/",
+      "location": "San Diego, CA, US",
+      "authors": "H. Yang, J. Ivey, and G. F. Riley",
+      "conference": "2017 IEEE 36th International Performance Computing and Communications Conference (IPCCC), pp. 1-8"
+    },
     {
       "date": "OCT 2017",
       "title": "Advancing Software-Defined Networks: A Survey",
