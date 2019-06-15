@@ -55,9 +55,18 @@
 ],
 "work": [
 {
+"company": "GEORGIA TECH RESEARCH INSTITUTE",
+"position": "Research Engineer",
+"years": "2018-Now",
+"location": "Robins AFB, GA",
+"summary": "Lead Product Owner and Software Systems Engineer for AF DCGS SOA ESB",
+"duties": [
+]
+},
+{
 "company": "577 SOFTWARE MAINTENANCE SQUADRON",
 "position": "Electronics Engineer",
-"years": "2009-Now",
+"years": "2009-2018",
 "location": "Robins AFB, GA",
 "summary": "Technical Lead for Software Development and Maintenance of E8-C Joint STARS",
 "duties": [
@@ -72,7 +81,7 @@
 {
 "company": "PENFIELD COLLEGE, MERCER UNIVERSITY",
 "position": "Adjunct Faculty",
-"years": "2018-Now",
+"years": "2018-2019",
 "location": "Macon, GA",
 "summary": "Adjunct Professor in the Department of Mathematics, Science, and Informatics",
 "duties": [
