@@ -61,6 +61,10 @@
 "location": "Robins AFB, GA",
 "summary": "Lead Product Owner and Software Systems Engineer for AF DCGS SOA ESB",
 "duties": [
+ "Lead product owner and software systems engineer for the Service-Oriented Architecture Enterprise Service Bus (SOA ESB) supporting Air Force Distributed Common Ground System (AF DCGS) under a Scaled Agile Framework (SAFe).",
+ "Collect and prioritize objectives from all intelligence spaces (INTs) in AF DCGS as they relate to the SOA ESB, a shared service that implements features within a publisher/subscriber and message-oriented framework in a consistent and open-source manner across the AF DCGS Enterprise.",
+ "Design and implement a workload consolidation and organic transition for the development of SOA ESB through actions including creation and configuration of consolidated spaces in Confluence, Jira, Bitbucket, and Jenkins via the Defense Intelligence Information Enterprise (DI2E) framework, synthesis of the team structure to support paired programming and knowledge transfer from contracted to organic support personnel, and a coordinated transition of sprint cadence to support a more consistent and appropriate release management cycle.",
+ "Research and leverage domain knowledge relevant to the systems interacting with SOA ESB and within the SOA ESB architecture itself to better inform design decisions for the AF DCGS Enterprise open architecture as well as educate colleagues regarding these concepts. Relevant subjects understood include, but are not limited to: MPEG standards and the transport stream; JPEG and NITF imagery standards; Knowledge as a Service; artificial intelligence/machine learning; message routing via Apache ActiveMQ Artemis and Camel; cataloging via Apache Solr; container orchestration via Docker and Kubernetes."
 ]
 },
 {
@@ -70,12 +74,13 @@
 "location": "Robins AFB, GA",
 "summary": "Technical Lead for Software Development and Maintenance of E8-C Joint STARS",
 "duties": [
-"Technical software lead and subject matter expert in external geographic dataset management and pre- and post-mission data processing tools for the E-8C Joint Surveillance Target Attack Radar System (JSTARS).",
-"Oversee a Scrum team of 8 engineers in the architectural design and development of new and existing software products for JSTARS through direct guidance, mentoring, and process facilitation of team members and by conducting products in an Agile manner through the software development life cycle.",
-"Communicate as an advisor to other technical leads and integrated product team (IPT) leads both in-house and at Northrop Grumman Aerospace Systems in Melbourne, FL, to improve production quality.",
-"Exceed expectations by delivering 100% defect free software products in spite of aggressive delivery schedules and stringent quality measures.",
-"Duties include initiating, directing, and coordinating software studies and modifications, resolving complex requirements, and refining new software techniques.",
-"Design, implement, functionally test, and review several Software Change Requests (SCRs), Activities, and Software Tracking Requests (STRs)."
+"Provided leadership and direction for a Scrum team of 8 engineers in the architectural design and development of new and existing software products for JSTARS through direct guidance, mentoring, and process facilitation for team members and by conducting products using Agile processes throughout the entire software development life cycle.",
+"Mentored team members to enhance knowledge and skills, organized workload to optimize developmental opportunities for each team member based on current skill level, and explained planned solutions and thought processes used to develop solutions that met organizational and industry standards for software development.",
+"Lead team through Sprint estimation, planning, software development, and delivery to the development build using Rational ClearTeam Explorer.",
+"Authored, managed, and maintained the updates of the technical processes for the organization by leading the effort and guiding its overall completion while delegating and coordinating tasks among team members.",
+"Effectively communicated project status, risks, and issues to project leadership/management and mission partners. Researched, analyzed, and determined available courses of action for resolving risks and issues. Developed briefings and technical demonstrations to communicate and document progress, results, plans, and corrective actions to mission partners and stakeholders.",
+"Duties included initiating, directing, and coordinating software studies and modifications, resolving complex requirements, and refining new software techniques.",
+"Implemented, functionally tested, and reviewed Software Change Requests (SCRs) and Software Tracking Requests (STRs)."
 ]
 },
 {
