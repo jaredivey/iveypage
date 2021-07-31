@@ -71,7 +71,14 @@ def academic():
 
 @app.route('/personal')
 def personal():
-    return render_template('index.html', indextype = "personal", json = g.json_data, filenames=[url_for('static',filename='img/sloane.jpg'), url_for('static',filename='img/knowles.jpg')], generated = time.strftime("%a, %d %b %Y %H:%M:%S EST"))
+    return render_template('index.html', 
+                            indextype = "personal", 
+                            json = g.json_data, 
+                            filenames=[
+                                url_for('static',filename='img/sloane.jpg'), 
+                                url_for('static',filename='img/knowles.jpg'), 
+                                url_for('static',filename='img/lawton.jpg')], 
+                                generated = time.strftime("%a, %d %b %Y %H:%M:%S EST"))
 
 @app.route('/pdf')
 def pdf():
