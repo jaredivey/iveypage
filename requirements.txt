@@ -1,5 +1,5 @@
 Flask>=1.0.0
 Jinja2>=2.11.3
-python-docx==0.7.4
+python-docx==0.8.6
 cffi==0.8.6
 Flask-WeasyPrint==0.4
